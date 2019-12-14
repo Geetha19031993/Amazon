@@ -11,7 +11,7 @@ import utils.DataLibrary;
 
 public class ProjectSpecificMethods {
 
-	public ChromeDriver driver;
+	public static ChromeDriver driver;
 	public String excelFileName;
 	@DataProvider(name = "fetchData")
 	public Object[][] fetchData() throws IOException {
