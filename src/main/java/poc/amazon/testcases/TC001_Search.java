@@ -14,10 +14,10 @@ public class TC001_Search extends ProjectSpecificMethods {
 	}
 	
 	@Test(dataProvider="fetchData")
-	public void runTC001()
+	public void runTC001(String value,String VerifyMessage)
 	{
 		new SelectPage()
-   		.search("Samsung Galaxy M30")
+   		.search(value)
    		.click()
    		.productPrize()
    		.searchClick()
@@ -27,7 +27,7 @@ public class TC001_Search extends ProjectSpecificMethods {
    		.proceedButton()
    		.verifyPage()
    		.continueButton()
-		.verifyMessage("Enter your email or mobile phone number");
+		.verifyMessage(VerifyMessage);
 		
 	}
 
